@@ -3,6 +3,7 @@ import { createApp, type ComponentOptions } from 'vue/dist/vue.esm-bundler.js'
 // import CourseChecklist from './components/CourseChecklist';
 import type { Data } from './types/Data.type';
 import './assets/main.css'
+import CourseChecklist from './components/CourseChecklist';
 // import App from './App.vue'
 
 // const Description = {
@@ -23,18 +24,18 @@ import './assets/main.css'
 //     template: "<Description />"
 // }
 
-const App = {
-    template: `
-    <div>Title: {{ title }}</div>`,
-    data() {
-        return {
-            title: "My first Vue component"
-        }
-    },
-    created() {
-        console.log((this as ComponentOptions<Data>).title);
-    }
-}
+// const App = {
+//     template: `
+//     <div>Title: {{ title }}</div>`,
+//     data() {
+//         return {
+//             title: "My first Vue component"
+//         }
+//     },
+//     created() {
+//         console.log((this as ComponentOptions<Data>).title);
+//     }
+// }
 
 /**How reactivity works */
 // const App = {
@@ -63,10 +64,10 @@ const App = {
 //     template: "<NameInput />"
 // }
 
-// const App = {
-//     components: { CourseChecklist },
-//     template: "<CourseChecklist />"
-// }
+const App = {
+    components: { CourseChecklist },
+    template: "<CourseChecklist />"
+}
 
 
 const app = createApp(App)
